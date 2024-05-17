@@ -1,32 +1,21 @@
 function getComputerChoice(){
      let computerChoice = Math.random() * (3 - 1) + 1;
-     computerChoice = Math.round(computerChoice);
-     console.log(computerChoice);
-      return computerChoice;
+     return computerChoice = Math.round(computerChoice);
 }
 
 function getHumanChoice(){
     let humChoice = prompt("WRITE DOWN ROCK, PAPER OR SCISSORS TO PLAY!")
-    if (humChoice.toLowerCase() === "rock"){
-        return 1;
-    }
-    
-    else if (humChoice.toLowerCase() === "paper"){
-        return 2;
-    }
+    if (humChoice.toLowerCase() === "rock"){return 1;}
+    else if (humChoice.toLowerCase() === "paper"){return 2;}
+    else if (humChoice.toLowerCase() === "scissors"){return 3;}
 
-    else if (humChoice.toLowerCase() === "scissors"){
-        return 3;
-    }
     else{
         alert("Wrong answer, try again");
         getHumanChoice();
     }
-
 }
 let humanScore = 0;
 let computerScore = 0;
-
 function playRound(){
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
@@ -44,7 +33,7 @@ function playRound(){
         console.log("Current Score: " + "Human: " + humanScore + " / " + "Computer: " + computerScore);
         console.log("---------------------------------------------------")
     }
-
+    
     else{
         alert("HUMAN WINS !!")
         humanScore+=1;
