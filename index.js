@@ -17,6 +17,7 @@ function getHumanChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
+
 function playRound(){
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
@@ -25,14 +26,12 @@ function playRound(){
         alert("A TIE!!")
         currentScore();
     }
-    
     else if (humanChoice === 1 && computerChoice === 2 || humanChoice === 2 && computerChoice === 3 ||
         humanChoice === 3 && computerChoice ===1) {
         alert("COMPUTER WINS !!")
         computerScore+=1;
         currentScore();
     }
-
     else{
         alert("HUMAN WINS !!")
         humanScore+=1;
@@ -46,12 +45,14 @@ function currentScore(){
     console.log("Current Score: " + "Human: " + humanScore + " / " + "Computer: " + computerScore);
     console.log("---------------------------------------------------") ;
 }
+
 function playGame(){
     for (let i = 0; i <= 5; i++) {
         playRound();  
     }
     winner();
 }
+
 function winner(){
     if (humanScore > computerScore) {
         alert("Human Wins!!")
@@ -63,6 +64,6 @@ function winner(){
     }
     else{
         alert("IT'S A TIE!!")
-        console.log("IT'S A TIE!!!!")
+        console.log("IT'S A TIE!!")
     }
 }
